@@ -3,11 +3,11 @@ using UnityEngine;
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(SpriteRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
+    private const float DistanceBetweenPlayerAndGround = 0.05f;
+    
     [SerializeField] private LayerMask _ground;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpSpeed;
-
-    private const float DistanceBetweenPlayerAndGround = 0.05f;
     
     private readonly int _speedAnimatorParameter = Animator.StringToHash("Speed");
     private readonly int _isJumpingAnimatorParameter = Animator.StringToHash("IsJumping");
